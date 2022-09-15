@@ -18,23 +18,23 @@ import javax.swing.border.TitledBorder;
 
 public class trithemius extends JFrame {
     public trithemius() {
-        setTitle("Øèôð Òðèòåìèóñà");
+        setTitle("Шифр Тритемиуса");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Ïàíåëü JPanel — ýòî ýëåìåíò óïðàâëåíèÿ, ïðåäñòàâëÿþùèé ñîáîé ïðÿìîóãîëüíîå
-        // ïðîñòðàíñòâî, íà êîòîðîì ìîæíî ðàçìåùàòü äðóãèå ýëåìåíòû.
-        // Ó êàæäîé ïàíåëè åñòü òàê íàçûâàåìûé ìåíåäæåð ðàçìåùåíèÿ,
-        // êîòîðûé îïðåäåëÿåò ñòðàòåãèþ âçàèìíîãî ðàñïîëîæåíèÿ ýëåìåíòîâ, äîáàâëÿåìûõ íà ïàíåëü.
-        // Åãî ìîæíî èçìåíèòü ìåòîäîì setLayout(LayoutManager manager).
+        // Панель JPanel — это элемент управления, представляющий собой прямоугольное
+        // пространство, на котором можно размещать другие элементы.
+        // У каждой панели есть так называемый менеджер размещения,
+        // который определяет стратегию взаимного расположения элементов, добавляемых на панель.
+        // Его можно изменить методом setLayout(LayoutManager manager).
 
-        // Ìåíåäæåð ãðàíè÷íîãî ðàçìåùåíèÿ BorderLayout
-        // Ìåíåäæåð ðàçìåùåíèÿ BorderLayout ðàçäåëÿåò ïàíåëü íà ïÿòü îáëàñòåé:
-        // öåíòðàëüíóþ, âåðõíþþ, íèæíþþ, ïðàâóþ è ëåâóþ.
-        // Â êàæäóþ èç ýòèõ îáëàñòåé ìîæíî äîáàâèòü ðîâíî ïî îäíîìó êîìïîíåíòó,
-        // ïðè÷åì êîìïîíåíò áóäåò çàíèìàòü âñþ îòâåäåííóþ äëÿ íåãî îáëàñòü.
-        // Êîìïîíåíòû, äîáàâëåííûå â âåðõíþþ è íèæíþþ îáëàñòè, áóäóò ðàñòÿíóòû ïî øèðèíå,
-        // äîáàâëåííûå â ïðàâóþ è ëåâóþ — ïî âûñîòå, à êîìïîíåíò, äîáàâëåííûé â öåíòð, áóäåò ðàñòÿíóò òàê,
-        // ÷òîáû ïîëíîñòüþ çàïîëíèòü îñòàâøååñÿ ïðîñòðàíñòâî ïàíåëè.
+        // Менеджер граничного размещения BorderLayout
+        // Менеджер размещения BorderLayout разделяет панель на пять областей:
+        // центральную, верхнюю, нижнюю, правую и левую.
+        // В каждую из этих областей можно добавить ровно по одному компоненту,
+        // причем компонент будет занимать всю отведенную для него область.
+        // Компоненты, добавленные в верхнюю и нижнюю области, будут растянуты по ширине,
+        // добавленные в правую и левую — по высоте, а компонент, добавленный в центр, будет растянут так,
+        // чтобы полностью заполнить оставшееся пространство панели.
 
         JPanel content = new JPanel();
         content.setBorder(new EmptyBorder(30, 30, 30, 30));
@@ -44,19 +44,19 @@ public class trithemius extends JFrame {
         upPanel.setLayout(new BorderLayout());
         upPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // EtchedBorder — ðàìêà ñ òèñíåíèåì.
-        // TitledBorder — ðàìêà ñ çàãîëîâêîì.
-        // JScrollPane — ïàíåëü ïðîêðóòêè
+        // EtchedBorder — рамка с тиснением.
+        // TitledBorder — рамка с заголовком.
+        // JScrollPane — панель прокрутки
 
         JTextArea textInput = new JTextArea(10, 40);
         JScrollPane textInputScroll = new JScrollPane(textInput);
         textInputScroll.setBorder(new TitledBorder(new EtchedBorder(),
-                "Èñõîäíûé òåêñò"));
+                "Исходный текст"));
 
         JTextArea textOutput = new JTextArea(10, 40);
         JScrollPane textOutputScroll = new JScrollPane(textOutput);
         textOutputScroll.setBorder(new TitledBorder(new EtchedBorder(),
-                "Ðåçóëüòàò"));
+                "Результат"));
 
         upPanel.add(textInputScroll, BorderLayout.WEST);
         upPanel.add(textOutputScroll, BorderLayout.EAST);
@@ -67,19 +67,19 @@ public class trithemius extends JFrame {
 
         JPanel keyPanel = new JPanel();
         keyPanel.setLayout(new GridLayout(3, 2));
-        keyPanel.setBorder(new TitledBorder(new EtchedBorder(), "Êëþ÷è äëÿ ñìåùåíèÿ k = Ap\u00B2 + Bp + C"));
+        keyPanel.setBorder(new TitledBorder(new EtchedBorder(), "Ключи для смещения k = Ap\u00B2 + Bp + C"));
         JTextField[] keyFields = new JTextField[3];
         char keyFieldName = 'A';
         for (int i = 0; i < keyFields.length; i++) {
             keyFields[i] = new JTextField();
-            keyPanel.add(new JLabel("Êîýôôèöèåíò " + keyFieldName++));
+            keyPanel.add(new JLabel("Коэффициент " + keyFieldName++));
             keyPanel.add(keyFields[i]);
         }
 
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new GridLayout(2, 1));
 
-        JButton encryptButton = new JButton("Çàøèôðîâàòü");
+        JButton encryptButton = new JButton("Зашифровать");
         encryptButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textOutput.setText("");
@@ -92,7 +92,7 @@ public class trithemius extends JFrame {
             }
         });
 
-        JButton decryptButton = new JButton("Ðàñøèôðîâàòü");
+        JButton decryptButton = new JButton("Расшифровать");
         decryptButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textOutput.setText("");
@@ -114,9 +114,9 @@ public class trithemius extends JFrame {
         content.add(upPanel, BorderLayout.NORTH);
         content.add(downPanel, BorderLayout.SOUTH);
 
-        // Ìåòîä setContentPane(JPanel panel) ïîçâîëÿåò çàìåíèòü ïàíåëü ñîäåðæèìîãî îêíà.
-        // Åñëè âìåñòî ÿâíîãî óêàçàíèÿ ðàçìåðîâ îêíà, âûçâàòü ìåòîä pack(),
-        // îíè áóäóò ïîäîáðàíû îïòèìàëüíûì îáðàçîì ñ ó÷åòîì ïðåäïî÷òåíèé âñåõ ýëåìåíòîâ, ðàçìåùåííûõ â ýòîì îêíå
+        // Метод setContentPane(JPanel panel) позволяет заменить панель содержимого окна.
+        // Если вместо явного указания размеров окна, вызвать метод pack(),
+        // они будут подобраны оптимальным образом с учетом предпочтений всех элементов, размещенных в этом окне.
 
         setContentPane(content);
         pack();
