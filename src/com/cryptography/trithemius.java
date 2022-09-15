@@ -18,23 +18,23 @@ import javax.swing.border.TitledBorder;
 
 public class trithemius extends JFrame {
     public trithemius() {
-        setTitle("Шифр Тритемиуса");
+        setTitle("ГГЁГґГ° Г’Г°ГЁГІГҐГ¬ГЁГіГ±Г ");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Панель JPanel — это элемент управления, представляющий собой прямоугольное
-        // пространство, на котором можно размещать другие элементы.
-        // У каждой панели есть так называемый менеджер размещения,
-        // который определяет стратегию взаимного расположения элементов, добавляемых на панель.
-        // Его можно изменить методом setLayout(LayoutManager manager).
+        // ГЏГ Г­ГҐГ«Гј JPanel вЂ” ГЅГІГ® ГЅГ«ГҐГ¬ГҐГ­ГІ ГіГЇГ°Г ГўГ«ГҐГ­ГЁГї, ГЇГ°ГҐГ¤Г±ГІГ ГўГ«ГїГѕГ№ГЁГ© Г±Г®ГЎГ®Г© ГЇГ°ГїГ¬Г®ГіГЈГ®Г«ГјГ­Г®ГҐ
+        // ГЇГ°Г®Г±ГІГ°Г Г­Г±ГІГўГ®, Г­Г  ГЄГ®ГІГ®Г°Г®Г¬ Г¬Г®Г¦Г­Г® Г°Г Г§Г¬ГҐГ№Г ГІГј Г¤Г°ГіГЈГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ».
+        // Г“ ГЄГ Г¦Г¤Г®Г© ГЇГ Г­ГҐГ«ГЁ ГҐГ±ГІГј ГІГ ГЄ Г­Г Г§Г»ГўГ ГҐГ¬Г»Г© Г¬ГҐГ­ГҐГ¤Г¦ГҐГ° Г°Г Г§Г¬ГҐГ№ГҐГ­ГЁГї,
+        // ГЄГ®ГІГ®Г°Г»Г© Г®ГЇГ°ГҐГ¤ГҐГ«ГїГҐГІ Г±ГІГ°Г ГІГҐГЈГЁГѕ ГўГ§Г ГЁГ¬Г­Г®ГЈГ® Г°Г Г±ГЇГ®Г«Г®Г¦ГҐГ­ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў, Г¤Г®ГЎГ ГўГ«ГїГҐГ¬Г»Гµ Г­Г  ГЇГ Г­ГҐГ«Гј.
+        // Г…ГЈГ® Г¬Г®Г¦Г­Г® ГЁГ§Г¬ГҐГ­ГЁГІГј Г¬ГҐГІГ®Г¤Г®Г¬ setLayout(LayoutManager manager).
 
-        // Менеджер граничного размещения BorderLayout
-        // Менеджер размещения BorderLayout разделяет панель на пять областей:
-        // центральную, верхнюю, нижнюю, правую и левую.
-        // В каждую из этих областей можно добавить ровно по одному компоненту,
-        // причем компонент будет занимать всю отведенную для него область.
-        // Компоненты, добавленные в верхнюю и нижнюю области, будут растянуты по ширине,
-        // добавленные в правую и левую — по высоте, а компонент, добавленный в центр, будет растянут так,
-        // чтобы полностью заполнить оставшееся пространство панели.
+        // ГЊГҐГ­ГҐГ¤Г¦ГҐГ° ГЈГ°Г Г­ГЁГ·Г­Г®ГЈГ® Г°Г Г§Г¬ГҐГ№ГҐГ­ГЁГї BorderLayout
+        // ГЊГҐГ­ГҐГ¤Г¦ГҐГ° Г°Г Г§Г¬ГҐГ№ГҐГ­ГЁГї BorderLayout Г°Г Г§Г¤ГҐГ«ГїГҐГІ ГЇГ Г­ГҐГ«Гј Г­Г  ГЇГїГІГј Г®ГЎГ«Г Г±ГІГҐГ©:
+        // Г¶ГҐГ­ГІГ°Г Г«ГјГ­ГіГѕ, ГўГҐГ°ГµГ­ГѕГѕ, Г­ГЁГ¦Г­ГѕГѕ, ГЇГ°Г ГўГіГѕ ГЁ Г«ГҐГўГіГѕ.
+        // Г‚ ГЄГ Г¦Г¤ГіГѕ ГЁГ§ ГЅГІГЁГµ Г®ГЎГ«Г Г±ГІГҐГ© Г¬Г®Г¦Г­Г® Г¤Г®ГЎГ ГўГЁГІГј Г°Г®ГўГ­Г® ГЇГ® Г®Г¤Г­Г®Г¬Гі ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГі,
+        // ГЇГ°ГЁГ·ГҐГ¬ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІ ГЎГіГ¤ГҐГІ Г§Г Г­ГЁГ¬Г ГІГј ГўГ±Гѕ Г®ГІГўГҐГ¤ГҐГ­Г­ГіГѕ Г¤Г«Гї Г­ГҐГЈГ® Г®ГЎГ«Г Г±ГІГј.
+        // ГЉГ®Г¬ГЇГ®Г­ГҐГ­ГІГ», Г¤Г®ГЎГ ГўГ«ГҐГ­Г­Г»ГҐ Гў ГўГҐГ°ГµГ­ГѕГѕ ГЁ Г­ГЁГ¦Г­ГѕГѕ Г®ГЎГ«Г Г±ГІГЁ, ГЎГіГ¤ГіГІ Г°Г Г±ГІГїГ­ГіГІГ» ГЇГ® ГёГЁГ°ГЁГ­ГҐ,
+        // Г¤Г®ГЎГ ГўГ«ГҐГ­Г­Г»ГҐ Гў ГЇГ°Г ГўГіГѕ ГЁ Г«ГҐГўГіГѕ вЂ” ГЇГ® ГўГ»Г±Г®ГІГҐ, Г  ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІ, Г¤Г®ГЎГ ГўГ«ГҐГ­Г­Г»Г© Гў Г¶ГҐГ­ГІГ°, ГЎГіГ¤ГҐГІ Г°Г Г±ГІГїГ­ГіГІ ГІГ ГЄ,
+        // Г·ГІГ®ГЎГ» ГЇГ®Г«Г­Г®Г±ГІГјГѕ Г§Г ГЇГ®Г«Г­ГЁГІГј Г®Г±ГІГ ГўГёГҐГҐГ±Гї ГЇГ°Г®Г±ГІГ°Г Г­Г±ГІГўГ® ГЇГ Г­ГҐГ«ГЁ.
 
         JPanel content = new JPanel();
         content.setBorder(new EmptyBorder(30, 30, 30, 30));
@@ -44,19 +44,19 @@ public class trithemius extends JFrame {
         upPanel.setLayout(new BorderLayout());
         upPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // EtchedBorder — рамка с тиснением.
-        // TitledBorder — рамка с заголовком.
-        // JScrollPane — панель прокрутки
+        // EtchedBorder вЂ” Г°Г Г¬ГЄГ  Г± ГІГЁГ±Г­ГҐГ­ГЁГҐГ¬.
+        // TitledBorder вЂ” Г°Г Г¬ГЄГ  Г± Г§Г ГЈГ®Г«Г®ГўГЄГ®Г¬.
+        // JScrollPane вЂ” ГЇГ Г­ГҐГ«Гј ГЇГ°Г®ГЄГ°ГіГІГЄГЁ
 
         JTextArea textInput = new JTextArea(10, 40);
         JScrollPane textInputScroll = new JScrollPane(textInput);
         textInputScroll.setBorder(new TitledBorder(new EtchedBorder(),
-                "Исходный текст"));
+                "Г€Г±ГµГ®Г¤Г­Г»Г© ГІГҐГЄГ±ГІ"));
 
         JTextArea textOutput = new JTextArea(10, 40);
         JScrollPane textOutputScroll = new JScrollPane(textOutput);
         textOutputScroll.setBorder(new TitledBorder(new EtchedBorder(),
-                "Результат"));
+                "ГђГҐГ§ГіГ«ГјГІГ ГІ"));
 
         upPanel.add(textInputScroll, BorderLayout.WEST);
         upPanel.add(textOutputScroll, BorderLayout.EAST);
@@ -67,19 +67,19 @@ public class trithemius extends JFrame {
 
         JPanel keyPanel = new JPanel();
         keyPanel.setLayout(new GridLayout(3, 2));
-        keyPanel.setBorder(new TitledBorder(new EtchedBorder(), "Ключи для смещения k = Ap\u00B2 + Bp + C"));
+        keyPanel.setBorder(new TitledBorder(new EtchedBorder(), "ГЉГ«ГѕГ·ГЁ Г¤Г«Гї Г±Г¬ГҐГ№ГҐГ­ГЁГї k = Ap\u00B2 + Bp + C"));
         JTextField[] keyFields = new JTextField[3];
         char keyFieldName = 'A';
         for (int i = 0; i < keyFields.length; i++) {
             keyFields[i] = new JTextField();
-            keyPanel.add(new JLabel("Коэффициент " + keyFieldName++));
+            keyPanel.add(new JLabel("ГЉГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІ " + keyFieldName++));
             keyPanel.add(keyFields[i]);
         }
 
         JPanel buttonsPanel = new JPanel();
         buttonsPanel.setLayout(new GridLayout(2, 1));
 
-        JButton encryptButton = new JButton("Зашифровать");
+        JButton encryptButton = new JButton("Г‡Г ГёГЁГґГ°Г®ГўГ ГІГј");
         encryptButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textOutput.setText("");
@@ -92,7 +92,7 @@ public class trithemius extends JFrame {
             }
         });
 
-        JButton decryptButton = new JButton("Расшифровать");
+        JButton decryptButton = new JButton("ГђГ Г±ГёГЁГґГ°Г®ГўГ ГІГј");
         decryptButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textOutput.setText("");
@@ -114,9 +114,9 @@ public class trithemius extends JFrame {
         content.add(upPanel, BorderLayout.NORTH);
         content.add(downPanel, BorderLayout.SOUTH);
 
-        // Метод setContentPane(JPanel panel) позволяет заменить панель содержимого окна.
-        // Если вместо явного указания размеров окна, вызвать метод pack(),
-        // они будут подобраны оптимальным образом с учетом предпочтений всех элементов, размещенных в этом окне.
+        // ГЊГҐГІГ®Г¤ setContentPane(JPanel panel) ГЇГ®Г§ГўГ®Г«ГїГҐГІ Г§Г Г¬ГҐГ­ГЁГІГј ГЇГ Г­ГҐГ«Гј Г±Г®Г¤ГҐГ°Г¦ГЁГ¬Г®ГЈГ® Г®ГЄГ­Г .
+        // Г…Г±Г«ГЁ ГўГ¬ГҐГ±ГІГ® ГїГўГ­Г®ГЈГ® ГіГЄГ Г§Г Г­ГЁГї Г°Г Г§Г¬ГҐГ°Г®Гў Г®ГЄГ­Г , ГўГ»Г§ГўГ ГІГј Г¬ГҐГІГ®Г¤ pack(),
+        // Г®Г­ГЁ ГЎГіГ¤ГіГІ ГЇГ®Г¤Г®ГЎГ°Г Г­Г» Г®ГЇГІГЁГ¬Г Г«ГјГ­Г»Г¬ Г®ГЎГ°Г Г§Г®Г¬ Г± ГіГ·ГҐГІГ®Г¬ ГЇГ°ГҐГ¤ГЇГ®Г·ГІГҐГ­ГЁГ© ГўГ±ГҐГµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў, Г°Г Г§Г¬ГҐГ№ГҐГ­Г­Г»Гµ Гў ГЅГІГ®Г¬ Г®ГЄГ­ГҐ
 
         setContentPane(content);
         pack();
